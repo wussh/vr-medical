@@ -12,13 +12,13 @@
         src: "./{{ item }}"
         dest: "C:\\ClassAct\\{{ item }}"
       loop:
-        - ClassAct_Medsim_Medical-Installer.exe
-        - ClassAct_Medsim_Medical-Installer-1.bin
-        - ClassAct_Medsim_Medical-Installer-2.bin
-        - ClassAct_Medsim_Medical-Installer-3.bin
+        - ClassAct_Medsim-Installer.exe
+        - ClassAct_Medsim-Installer-1.bin
+        - ClassAct_Medsim-Installer-2.bin
+        - ClassAct_Medsim-Installer-3.bin
 
     - name: Run ClassAct Dezastru Command installer silently
       win_command: >
-        "C:\ClassAct\ClassAct_Medsim_Medical-Installer.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
+        "C:\ClassAct\ClassAct_Medsim-Installer.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
       args:
         chdir: C:\ClassAct
