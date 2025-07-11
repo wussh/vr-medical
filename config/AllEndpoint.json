@@ -1,11 +1,11 @@
 {
-    "api_ip" : "http://hahahaha:1341",
-    "module_endpoint" : "/api/v1/procedural/scenario/module",
-    "scenario_endpoint" : "/api/v1/procedural/scenario",
-    "show_scenario" : "/api/v1/procedural/scenario/",
-    "report_endpoint" : "/api/v1/procedural/report",
-    "object_endpoint" : "/api/v1/procedural/list/object",
-    "tools_endpoint" : "/api/v1/procedural/tools/",
-    "post_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution",
-    "get_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution/users/"
-  }
+  "api_ip" : "http://hahahahah:1341",
+  "module_endpoint" : "/api/v1/procedural/scenario/module",
+  "scenario_endpoint" : "/api/v1/procedural/scenario",
+  "show_scenario" : "/api/v1/procedural/scenario/",
+  "report_endpoint" : "/api/v1/procedural/report",
+  "object_endpoint" : "/api/v1/procedural/list/object",
+  "tools_endpoint" : "/api/v1/procedural/tools/",
+  "post_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution",
+  "get_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution/users/"
+}
