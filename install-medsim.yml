@@ -1,0 +1,24 @@
+- name: Copy and Install ClassAct Dezastru Command
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Ensure C:\ClassAct directory exists
+      win_file:
+        path: C:\ClassAct
+        state: directory
+
+    - name: Copy installer files to C:\ClassAct
+      win_copy:
+        src: "./{{ item }}"
+        dest: "C:\\ClassAct\\{{ item }}"
+      loop:
+        - ClassAct_Medsim_Medical-Installer.exe
+        - ClassAct_Medsim_Medical-Installer-1.bin
+        - ClassAct_Medsim_Medical-Installer-2.bin
+        - ClassAct_Medsim_Medical-Installer-3.bin
+
+    - name: Run ClassAct Dezastru Command installer silently
+      win_command: >
+        "C:\ClassAct\ClassAct_Medsim_Medical-Installer.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
+      args:
+        chdir: C:\ClassAct
