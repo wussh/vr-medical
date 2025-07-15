@@ -1,0 +1,21 @@
+{
+  "Data" : 
+  [
+    {
+      "Key": "Address",
+      "Value": "192.168.88.99"
+    },
+    {
+      "Key": "Port",
+      "Value": "7777"
+    },
+    {
+      "Key": "UserLogin",
+      "Value": "/pusditek/public/api/v1/main/user/login"
+    },
+    {
+      "Key": "Chapter",
+      "Value": "/pusditek/public/api/v1/main/chapters"
+    }
+  ]
+}

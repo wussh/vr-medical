@@ -1,11 +1,14 @@
 {
-  "api_ip" : "http://hahahahah:1341",
-  "module_endpoint" : "/api/v1/procedural/scenario/module",
-  "scenario_endpoint" : "/api/v1/procedural/scenario",
-  "show_scenario" : "/api/v1/procedural/scenario/",
-  "report_endpoint" : "/api/v1/procedural/report",
-  "object_endpoint" : "/api/v1/procedural/list/object",
-  "tools_endpoint" : "/api/v1/procedural/tools/",
-  "post_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution",
-  "get_last_scenario_executed_endpoint" : "/api/v1/procedural/scenario/last-execution/users/"
+  "ip" : "http://192.168.88.99",
+  "module" : "/api/module/collections",
+  "module_pdf" : "/api/module/pdf/",
+  "report" : "/api/parent-report-all",
+  "report_by_id" : "/api/parent-report/",
+  "object" : "/api/objects-all",
+  "chapter" : "/api/chapter/collections",
+  "selected_chapter" : "/api/chapters/",
+  "event" : "/api/event/collections",
+  "selected_event" : "/api/events/",
+  "parent_report_post": "/api/parent-report",
+  "last_play": "/api/assigned-module/"
 }

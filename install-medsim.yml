@@ -12,10 +12,10 @@
         src: "./{{ item }}"
         dest: "C:\\ClassAct\\{{ item }}"
       loop:
-        - ClassAct_Medsim-Installer.exe
-        - ClassAct_Medsim-Installer-1.bin
-        - ClassAct_Medsim-Installer-2.bin
-        - ClassAct_Medsim-Installer-3.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.0.exe
+        - ClassAct_Dezastru_Command-Installer_V.1.0-1.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.0-2.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.0-3.bin
 
     - name: Run ClassAct Dezastru Command installer silently
       win_command: >

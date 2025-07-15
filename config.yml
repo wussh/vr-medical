@@ -2,25 +2,10 @@
   hosts: windows
   gather_facts: no
   tasks:
-    - name: Ensure StreamingAssets directory exists
-      win_file:
-        path: C:\ClassAct\GameClient\Classact Medsim Medical Procedure Training_Data\StreamingAssets
-        state: directory
-
-    - name: Ensure Utility\JSON directory exists
-      win_file:
-        path: C:\ClassAct\GameClient\Classact Medsim Medical Procedure Training_Data\StreamingAssets\Utility\JSON
-        state: directory
-
-    - name: Ensure Conf directory exists
-      win_file:
-        path: C:\ClassAct\Conf
-        state: directory
-
     - name: Copy ConfigFile.confg to StreamingAssets
       win_copy:
-        src: ./config/ConfigFile.confg
-        dest: C:\ClassAct\GameClient\Classact Medsim Medical Procedure Training_Data\StreamingAssets\ConfigFile.confg
+        src: ./config/config.json
+        dest: C:\ClassAct\MPGameClient\Classact Dezastru Command Multiplayer VR Disaster_Data\StreamingAssets\config.json
 
     - name: Copy conf.file to Conf
       win_copy:
@@ -30,4 +15,4 @@
     - name: Copy AllEndpoint.json to Utility\JSON
       win_copy:
         src: ./config/AllEndpoint.json
-        dest: C:\ClassAct\GameClient\Classact Medsim Medical Procedure Training_Data\StreamingAssets\Utility\JSON\AllEndpoint.json
+        dest: C:\ClassAct\MPGameClient\Classact Dezastru Command Multiplayer VR Disaster_Data\StreamingAssets\Utility\JSON\AllEndpoint.json
