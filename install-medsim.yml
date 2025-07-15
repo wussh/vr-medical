@@ -19,6 +19,6 @@
 
     - name: Run ClassAct Dezastru Command installer silently
       win_command: >
-        "C:\ClassAct\ClassAct_Medsim-Installer.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
+        "C:\ClassAct\ClassAct_Dezastru_Command-Installer_V.1.0.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
       args:
         chdir: C:\ClassAct
