@@ -1,7 +1,18 @@
-- name: Copy and Install ClassAct Dezastru Command
+- name: Copy, Uninstall (if necessary), and Install ClassAct Dezastru Command
   hosts: windows
   gather_facts: no
   tasks:
+    - name: Uninstall existing ClassAct Dezastru Command
+      win_command: >
+        "C:\ClassAct\unins000.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+      ignore_errors: yes
+
+    - name: Delete existing ClassAct directory (if exists)
+      win_file:
+        path: C:\ClassAct
+        state: absent
+      ignore_errors: yes
+
     - name: Ensure C:\ClassAct directory exists
       win_file:
         path: C:\ClassAct
@@ -12,13 +23,13 @@
         src: "./{{ item }}"
         dest: "C:\\ClassAct\\{{ item }}"
       loop:
-        - ClassAct_Dezastru_Command-Installer_V.1.0.exe
-        - ClassAct_Dezastru_Command-Installer_V.1.0-1.bin
-        - ClassAct_Dezastru_Command-Installer_V.1.0-2.bin
-        - ClassAct_Dezastru_Command-Installer_V.1.0-3.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.1.exe
+        - ClassAct_Dezastru_Command-Installer_V.1.1-1.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.1-2.bin
+        - ClassAct_Dezastru_Command-Installer_V.1.1-3.bin
 
     - name: Run ClassAct Dezastru Command installer silently
       win_command: >
-        "C:\ClassAct\ClassAct_Dezastru_Command-Installer_V.1.0.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
+        "C:\ClassAct\ClassAct_Dezastru_Command-Installer_V.1.1.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\ClassAct" /LOG="install.log"
       args:
         chdir: C:\ClassAct
